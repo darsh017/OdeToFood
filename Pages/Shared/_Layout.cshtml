@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] OdeToFood</title>
+    <title>@ViewData["Title"] - OdeToFood</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -45,7 +45,10 @@
         @RenderBody()
         <hr />
         <footer>
+            <vc:restaurant-count></vc:restaurant-count>
+            @RenderSection("footer", required:false)
             <p>&copy; 2019 - OdeToFood</p>
+            <img src="~/OdeToFood.png" />
         </footer>
     </div>
 
